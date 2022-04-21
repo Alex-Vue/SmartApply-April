@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Fantasy;
+    background-size: cover;
+    background-color: #999999
+    /*background: url(glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg) center;*/
+}
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #ebebde;
+}
+
+/* Style the topnav links */
+.topnav button {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+
+/* Change color on hover */
+.topnav button:hover {
+    font-family: candara;
+    font-weight: bold;
+    background-color: #ebebde;
+    color: black;
+}
+.main{
+    background-color: #3d4c41;
+    margin-bottom:50px;
+    bottom:100%;
+    width:100%;
+    text-align: center;
+}
+.main h1{
+    color: #ebebde;
+    font-family: Didot;
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  color: #3d4c41;
+    font-family: Didot;
+    font-size: 40px;
+    font-weight: bold;
+  cursor: pointer;
+  padding: 40px;
+  width: 100%;
+  text-align: center;
+  border: black;
+  outline: black;
+  transition: 0.4s;
+
+}
+
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #999999;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+    width: 100%;
+  overflow: hidden;
+    color: #777764;
+    font-family: Didot;
+    font-size: 28px;
+    /*font-weight: bold;*/
+    margin-bottom: 20px;
+      transition: max-height 0.2s ease-out;
+
+}
+
+
+
+

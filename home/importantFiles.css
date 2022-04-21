@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Fantasy;
+    background-size: cover;
+    background: url(glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg) center;
+}
+.logo{
+
+    width: 100px;
+    height: 100px;
+    border-radois: 50%;
+    position: absolute;
+    top: 30px;
+    left: calc(50% - 50px);
+    background: url(logo.jpg) center;
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav button {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+}
+
+/* Change color on hover */
+.topnav button:hover {
+  background-color: #ddd;
+  color: black;
+}
