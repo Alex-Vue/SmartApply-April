@@ -1,0 +1,40 @@
+{% load static %}
+
+<html>
+<head>
+    <title>
+        Login Form Design
+    </title>
+    <link rel="stylesheet" href="{% static 'css/users/signin.css' %}">
+</head>
+
+<body>
+<div class="sign-in">
+ <div class="logo">
+ </div>
+     <h1> Sign In </h1>
+    <form action="" method="post">
+        <h2> Username: </h2>
+<input name="username" type="text" placeholder="Enter Username">
+        <h2> Password: </h2>
+<input name="password" type="password" placeholder="Enter Password" class="pass">
+        <h2> </h2>
+        <input type="submit" value="Sign In!" class="submit">
+</form>
+
+    <h3> Do you not have an account? <a href="/sign-up/">Sign up</a></h3>
+</div>
+</body>
+
+</html>
+
+
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+
+{% endif %}<br>

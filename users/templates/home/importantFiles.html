@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Smart Apply</title>
+    {% load static %}
+    <link href="{% static 'css/home/home.css' %}" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+
+    Important Files Page
+
+    {% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+  </form>
+
+  <p><a href="home/home.html">Return to home</a></p>
+{% endblock %}
+
+  <div>
+    <p>Your uploads:</p>
+    <ul class="uploads">
+    {% for x in uploads %}
+    <li>{{ x.document }}</li>
+    {% endfor %}
+    </ul>
+    <br>
+    <div>
+      
+    </div>
+  </div>
+
+    
+  </body>
+</html>

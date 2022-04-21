@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Smart Apply</title>
+
+    <link href="{% static 'css/index/home.css' %}" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <div class="topnav">
+      
+      <button onclick style="float: right">
+        <a href="/log-out">
+          Log out
+        </a>
+      </button>
+      <button onclick style="float: right">
+        <a href="/user-profile">{{ user }}</a>
+      </button>
+      <button>
+        <a href="/cal">
+          Calendar
+        </a>
+      </button>
+      <button onclick>
+        <a href="/important-files">
+          Important Files 
+        </a>
+      </button>
+      <button onclick>
+        <a href="/process-of-applications">
+          Process of Applications
+        </a>
+      </button>
+      <button onclick>
+        <a href="/app-org">
+          Application Organizer
+        </a>
+      </button>
+
+Application Organizer
+
+      
+    </div>
+  </body>
+</html>

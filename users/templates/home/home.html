@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Smart Apply</title>
+
+    <link href="{% static 'css/home/home.css' %}" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <div class="topnav">
+      
+      <button onclick style="float: right">
+        <a href="/log-out">
+          Log out
+        </a>
+      </button>
+      <button onclick style="float: right">
+        <a href="/user-profile">{{ request.session.user.User_name }}</a>
+      </button>
+      <button>
+        <a href="/cal">
+          Calendar
+        </a>
+      </button>
+      <button onclick>
+        <a href="/important-files">
+          Important Files 
+        </a>
+      </button>
+      <button onclick>
+        <a href="/process-of-applications">
+          Process of Applications
+        </a>
+      </button>
+    </div>
+
+    <!-- website design -->
+  <div class="main">
+
+  <h1><b>Welcome!<br>How can you use SmartApply to Your Advantage?</b></h1>
+
+</div>
+
+<button class="accordion">How Should I Use My Calendar?</button>
+<div class="panel">
+  <p>Use your calendar as a way to view your most up and coming events related to your job applications. When you have an interview add that, when you have an upcoming due date for an application add it, when you have a meeting with a mentor to get feedback on your resume add that. This way you can easily see what you have going on in the next month and know what is coming up sooner then the next deadline.</p>
+</div>
+
+<button class="accordion">What Should I Upload for My Important Files?</button>
+<div class="panel">
+  <p>Every application usually has common requirements. It is safe to assume that one of those common requirements is for you to upload a resume. The important files page is a great place to upload and save all the latest documents that you might need when you have a job application. This way you don't need to traverse through multiple versions of important documents to make sure you have the right one, and you can just save a lot of time by having exactly what you need at the moment you need it.</p>
+</div>
+
+<button class="accordion">What is the Application Process Tab? How Can I Use It?</button>
+<div class="panel">
+  <p>The Application Process page is a great way to visualize your current state in the application process. The Calendar has all of your upcoming due dates, and when they are. Although your application process tab has all of your applications and where they are in the application process. Whether the application is something you still need to apply to, something you are waiting for a response on, has an upcoming interview, or you were given an offer is all clearly shown in the application process tab.</p>
+</div>
+
+  </body>
+</html>

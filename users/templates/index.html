@@ -1,0 +1,40 @@
+{% load static %}
+<html>
+<head>
+    <title>
+        Initial Page
+    </title>
+    <link rel="stylesheet" href="{% static '/css/index/index.css' %}">
+</head>
+
+<body>
+<div class="initial-page">
+    <div class="logo">
+ </div>
+        <h1>Welcome to SmartApply</h1>
+
+
+    <h2>
+        An App to get Everything Application Related Done in One Place
+    </h2>
+
+    <h3> Is it your first time here? Sign up! </h3>
+
+    <button><a href="/sign-up">Sign Up!</a> </button>
+
+    <h3> If you are not new, Sign in! </h3>
+
+    <button> <a href="/sign-in">Sign In!</a> </button>
+
+</div>
+</body>
+
+</html>
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li>{% if message.tags %} {% endif %}{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}<br>

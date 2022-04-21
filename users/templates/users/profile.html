@@ -1,0 +1,67 @@
+{% load static %}
+<html>
+<head>
+    <title>
+        Profile
+    </title>
+    <link rel="stylesheet" href="{% static 'css/users/profile.css' %}">
+</head>
+
+<body>
+ <div class="topnav">
+
+      <button onclick style="float: right">
+        <a href="/log-out">
+          Log out
+        </a>
+      </button>
+      <button onclick style="float: right">
+        <a href="/user-profile">{{ request.session.user.User_name }}</a>
+      </button>
+      <button>
+        <a href="/cal">
+          Calendar
+        </a>
+      </button>
+      <button onclick>
+        <a href="/important-files">
+          Important Files
+        </a>
+      </button>
+      <button onclick>
+        <a href="/process-of-applications">
+          Process of Applications
+        </a>
+      </button>
+    </div>
+
+<div class="container">
+  <div style="text-align:center">
+    <h2>Profile</h2>
+    <p>user_id</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="/users/profile-test.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+          <p>user_id</p>
+          <p>first name</p>
+          <p>last name</p>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+
+</body>
+
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li>{% if message.tags %} {% endif %}{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}<br>
