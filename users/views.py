@@ -1,12 +1,9 @@
-import json
+import json, os
 from django.contrib import messages
 from django.shortcuts import render, redirect
-from django.http import HttpResponseRedirect
-from django.http import JsonResponse
+from django.http import HttpResponseRedirect, JsonResponse, Http404, HttpResponse
 from users.models import User, Calendar, Document
-from django.shortcuts import render
 from django.conf import settings
-from django.core.files.storage import FileSystemStorage
 from django import forms
 from users.forms import DocumentForm
 
@@ -249,6 +246,15 @@ def files(request):
         'form': form,
         'uploads': Document.objects.all()
     })
+
+def download(request, path):
+    file_path = "documents/" + path;
+    if os.path.exists(file_path):
+        with open(file_path, 'rb') as fh:
+            response = HttpResponse(fh.read(), content_type="application/vnd.ms-excel")
+            response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
+            return response
+    raise Http404
 
 
 def applications(request):

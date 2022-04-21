@@ -23,7 +23,7 @@
     <p>Your uploads:</p>
     <ul class="uploads">
     {% for x in uploads %}
-    <li>{{ x.document }}</li>
+    <li><a href="{{x.document}}" download>{{x.document}}</a></li>
     {% endfor %}
     </ul>
     <br>
