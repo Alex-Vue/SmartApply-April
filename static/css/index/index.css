@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Futura;
+    background-size: cover;
+    background: url(glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg) center;
+}
+
+
+.initial-page{
+    width: 500px;
+    box-shadow: 0 0 40px 0 rgb(235, 235, 222);
+    background: #3d4c41;
+    padding: 100px;
+    margin: 5% auto 0;
+    text-align: center;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+    border-radois: 50%;
+    position: absolute;
+    top: 30px;
+    left: calc(50% - 50px);
+    background: url(logo.jpg) center;
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+}
+
+.initial-page h1{
+    color: #ebebde;
+    font-family: Didot;
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+
+
+.initial-page h2{
+    color: #ebebde;
+    font-family: Didot;
+    font-size: 28px;
+    /*font-weight: bold;*/
+    margin-bottom: 15px;
+}
+
+.initial-page h3{
+    color: #ebebde;
+    font-family: Didot;
+    font-size: 28px;
+    /*font-weight: bold;*/
+    margin-bottom: 20px;
+}
+
+/* Style the topnav links */
+.initial-page button {
+font-family: sans-serif;
+  color: black;
+  text-align: center;
+  padding: 10px 12px;
+  text-decoration: none;
+
+}
+
+/* Change color on hover */
+.initial-page button:hover {
+    font-family: candara;
+     font-weight: bold;
+  background-color: #ebebde;
+  color: black;
+}
