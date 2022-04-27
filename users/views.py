@@ -257,9 +257,15 @@ def download(request, path):
             return response
     raise Http404
 
-def deleteFile(request, id):
-  file_to_be_deleted = Document.objects.get(id=id)
+def deleteFile(request, document):
+  if os.path.exists(document):
+    os.remove(document)
+    
+  file_to_be_deleted = Document.objects.get(document=document)
   file_to_be_deleted.delete()
+  #match doc with os to delete file path
+  
+  
   return HttpResponseRedirect(reverse('importantfiles'))
     
 

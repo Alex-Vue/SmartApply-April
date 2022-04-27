@@ -27,7 +27,7 @@
     {% for x in uploads %}
     <li>
       <a href="{{x.document}}" download>{{x.document}}</a>
-      <a href="delete/{{x.id}}"><button>X</button></a>
+      <a href="delete/{{x.document}}"><button>X</button></a>
     </li>
     {% endfor %}
     </ul>

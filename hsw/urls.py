@@ -31,7 +31,7 @@ urlpatterns = [
   path("resv_list/", views.ajax_resv_list),
   path("app-org", views.app_org),
   path("documents/<path:path>", views.download),
-  path("important-files/delete/<int:id>", views.deleteFile),
+  path("important-files/delete/<path:document>", views.deleteFile),
   
   ###################################### 20220418
   path("resv_cnt/", views.ajax_resv_cnt),
