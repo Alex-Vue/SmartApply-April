@@ -26,11 +26,13 @@ urlpatterns = [
   path('home', views.home),
   path('user-profile', views.profile_view),
   path("cal", views.cal),
-  path("important-files", views.files),
+  path("important-files/", views.files, name="importantfiles"),
   path("process-of-applications", views.applications),
   path("resv_list/", views.ajax_resv_list),
   path("app-org", views.app_org),
   path("documents/<path:path>", views.download),
+  path("important-files/delete/<int:id>", views.deleteFile),
+  
   ###################################### 20220418
   path("resv_cnt/", views.ajax_resv_cnt),
   ###################################### 20220418

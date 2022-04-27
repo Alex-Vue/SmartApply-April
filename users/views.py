@@ -6,6 +6,7 @@ from users.models import User, Calendar, Document
 from django.conf import settings
 from django import forms
 from users.forms import DocumentForm
+from django.urls import reverse
 
 #######################################################
 from django.db.models import Count
@@ -256,6 +257,11 @@ def download(request, path):
             return response
     raise Http404
 
+def deleteFile(request, id):
+  file_to_be_deleted = Document.objects.get(id=id)
+  file_to_be_deleted.delete()
+  return HttpResponseRedirect(reverse('importantfiles'))
+    
 
 def applications(request):
     return render(request, 'home/processOfApp.html')

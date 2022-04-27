@@ -4,6 +4,8 @@
     <title>Smart Apply</title>
     {% load static %}
     <link href="{% static 'css/home/home.css' %}" rel="stylesheet" type="text/css"/>
+
+    
   </head>
   <body>
 
@@ -23,7 +25,10 @@
     <p>Your uploads:</p>
     <ul class="uploads">
     {% for x in uploads %}
-    <li><a href="{{x.document}}" download>{{x.document}}</a></li>
+    <li>
+      <a href="{{x.document}}" download>{{x.document}}</a>
+      <a href="delete/{{x.id}}"><button>X</button></a>
+    </li>
     {% endfor %}
     </ul>
     <br>
