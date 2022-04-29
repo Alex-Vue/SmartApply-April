@@ -1,3 +1,26 @@
+.topnav {
+  overflow: hidden;
+  background-color: #ebebde;
+}
+
+/* Style the topnav links */
+.topnav button {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+
+/* Change color on hover */
+.topnav button:hover {
+    font-family: candara;
+    font-weight: bold;
+    background-color: #ebebde;
+    color: black;
+}
 body{
     margin: 0;
     padding: 0;

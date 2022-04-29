@@ -30,7 +30,7 @@ urlpatterns = [
   path("process-of-applications", views.applications),
   path("resv_list/", views.ajax_resv_list),
   path("app-org", views.app_org),
-  path("documents/<path:path>", views.download),
+  path("important-files/documents/<path:path>", views.download),
   path("important-files/delete/<path:document>", views.deleteFile),
   
   ###################################### 20220418

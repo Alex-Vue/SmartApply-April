@@ -8,8 +8,34 @@
     
   </head>
   <body>
+        <div class="topnav">
+      
+      <button onclick style="float: right">
+        <a href="/log-out">
+          Log out
+        </a>
+      </button>
+      <button onclick style="float: right">
+        <a href="/user-profile">{{ request.session.user.User_name }}</a>
+      </button>
+      <button>
+        <a href="/cal">
+          Calendar
+        </a>
+      </button>
+      <button onclick>
+        <a href="/important-files">
+          Important Files 
+        </a>
+      </button>
+      <button onclick>
+        <a href="/process-of-applications">
+          Process of Applications
+        </a>
+      </button>
+    </div>
 
-    Important Files Page
+    <h1>Upload Your Important Files </h1>
 
     {% block content %}
   <form method="post" enctype="multipart/form-data">
@@ -18,7 +44,7 @@
     <button type="submit">Upload</button>
   </form>
 
-  <p><a href="home/home.html">Return to home</a></p>
+  
 {% endblock %}
 
   <div>
